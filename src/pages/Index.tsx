@@ -11,7 +11,8 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden bg-gradient-to-b from-gray-900 via-brandBlue/80 to-gray-900">
+      <div className="fixed inset-0 bg-gradient-to-br from-brandBlue/10 to-brandOrange/5 pointer-events-none z-0"></div>
       <Navbar />
       <Hero />
       <Services />
