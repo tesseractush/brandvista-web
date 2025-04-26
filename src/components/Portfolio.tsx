@@ -10,37 +10,37 @@ const Portfolio = () => {
       id: 1,
       title: "3D LED Storefront Sign",
       category: "3dled",
-      image: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1563889362352-b0492c224f62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 2,
       title: "Shopping Mall Banner",
       category: "flex",
-      image: "https://images.unsplash.com/photo-1567958451986-2de427a4a0be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1618556450994-a6a128ef0d9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 3,
       title: "Corporate Office Signage",
       category: "acp",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 4,
       title: "Restaurant Steel Signage",
       category: "steel",
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 5,
       title: "Digital Marketing Campaign",
       category: "marketing",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 6,
       title: "Brand Awareness Campaign",
       category: "campaign",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      image: "https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
   ];
 
@@ -59,10 +59,10 @@ const Portfolio = () => {
     : portfolioItems.filter(item => item.category === filter);
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="portfolio" className="py-20 bg-gray-900">
       <div className="container-section">
-        <h2 className="section-title">Our Portfolio</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title text-white">Our Portfolio</h2>
+        <p className="section-subtitle text-gray-300">
           Take a look at some of our best work. Click on the categories to filter our projects.
         </p>
 
@@ -73,8 +73,8 @@ const Portfolio = () => {
               key={category.id}
               className={`px-4 py-2 rounded-full text-sm md:text-base transition-colors ${
                 filter === category.id
-                  ? "bg-brandBlue text-white"
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                  ? "bg-brandOrange text-white"
+                  : "bg-white/10 backdrop-blur-md hover:bg-white/20 text-white"
               }`}
               onClick={() => setFilter(category.id)}
             >
@@ -88,7 +88,7 @@ const Portfolio = () => {
           {filteredItems.map((item) => (
             <div 
               key={item.id} 
-              className="overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl group"
+              className="overflow-hidden rounded-lg shadow-xl transition-all duration-300 hover:shadow-2xl group bg-white/5 backdrop-blur-md"
             >
               <div className="relative h-64">
                 <img

@@ -33,14 +33,16 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-30 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        isScrolled ? "bg-white/10 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-bold text-brandBlue">
-            Brand<span className="text-brandOrange">Vista</span>
-          </span>
+          <img 
+            src="/lovable-uploads/38869e7c-a51c-44f3-81e2-a043de5e501e.png" 
+            alt="BrandVista Logo" 
+            className="h-16 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -49,7 +51,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="font-medium text-gray-700 hover:text-brandOrange transition-colors"
+              className="font-medium text-white hover:text-brandOrange transition-colors"
             >
               {link.name}
             </a>
@@ -58,7 +60,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="md:hidden text-gray-700"
+          className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -67,13 +69,13 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg animate-slide-in-top">
+        <div className="md:hidden bg-gray-900/95 backdrop-blur-md shadow-lg animate-slide-in-top">
           <div className="flex flex-col px-4 pt-2 pb-4 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="font-medium text-gray-700 hover:text-brandOrange transition-colors py-2"
+                className="font-medium text-white hover:text-brandOrange transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
