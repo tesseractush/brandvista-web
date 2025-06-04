@@ -22,12 +22,12 @@ const Navbar = () => {
   ];
 
   const serviceCategories = [
-    { name: "3D LED Signage", href: "#3d-led", description: "Eye-catching dimensional displays" },
-    { name: "Flex Printing", href: "#flex", description: "High-quality banner solutions" },
-    { name: "ACP Boards", href: "#acp", description: "Durable aluminum composite panels" },
-    { name: "Steel Signage", href: "#steel", description: "Premium metal displays" },
-    { name: "Digital Marketing", href: "#digital", description: "Online brand promotion" },
-    { name: "Brand Campaigns", href: "#campaigns", description: "Strategic brand awareness" },
+    { name: "3D LED Signage", href: "#services", description: "Eye-catching dimensional displays" },
+    { name: "Flex Printing", href: "#services", description: "High-quality banner solutions" },
+    { name: "ACP Boards", href: "#services", description: "Durable aluminum composite panels" },
+    { name: "Steel Signage", href: "#services", description: "Premium metal displays" },
+    { name: "Digital Marketing", href: "#services", description: "Online brand promotion" },
+    { name: "Brand Campaigns", href: "#services", description: "Strategic brand awareness" },
   ];
 
   useEffect(() => {
